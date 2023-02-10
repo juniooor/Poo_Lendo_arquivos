@@ -15,7 +15,7 @@ class ArquivoTexto(object):
       return self.conteudo[numero_linha-1] 
 
 
-class ArquivoCSV(ArquivoTexto):  ##Criando a Classe que Herdará de ArquivoTXT
+class ArquivoCSV(ArquivoTexto):  ##Criando a Classe que Herdará de ArquivoTexto
 
   def __init__(self, arquivo: str):  ##Funçao que iniciará a classe Pai
       super().__init__(arquivo=arquivo)  ##Iniciando a Classe Pai, onde arquivo recebe o arquivo da classe Pai
