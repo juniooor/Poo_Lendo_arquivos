@@ -27,7 +27,9 @@ class ArquivoCSV(ArquivoTexto):  ##Criando a Classe que Herdará de ArquivoTexto
 
   def extrair_coluna_da_linha(self, numero_linha: int, numero_coluna: int):  ##Função para Extrair coluna da linha
     num_linha = self.conteudo[numero_linha]  ##1° Buscamos a linha de "conteudo"
-    num_linha = num_linha.split(sep=',')[numero_coluna -1]  ##2° Fizemos Split separado por "," e atribuímos a chave -1.
+    num_linha = num_linha.split(sep=',')[numero_coluna -1]  
+    ##2° Fizemos Split separado por "," e atribuímos a chave -1.para poder pegar a coluna certa porquer o pc conta 0 como primeiro indice
+  
     return num_linha  ##retornamos a "num_linha"
 
 
@@ -40,3 +42,9 @@ print(arquivo_csv.extrair_linha(numero_linha=numero_linha))
 print('#'*30)
 numero_linha = 3 
 print(arquivo_csv.extrair_linha(numero_linha=numero_linha))
+
+print('#'*30)
+numero_coluna=2
+numero_linha = 3 
+print(f' numero coluna: {arquivo_csv.extrair_coluna_da_linha(numero_linha=numero_linha, numero_coluna=numero_coluna)}')
+
