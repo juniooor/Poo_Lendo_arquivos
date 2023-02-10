@@ -1,0 +1,7 @@
+id,valor_vendas,valor_manutencao,portas
+1,high,med,4
+2,med,low,3
+3,med,high,4
+4,low,low,2
+5,high,high,4
+6,high,low,2
